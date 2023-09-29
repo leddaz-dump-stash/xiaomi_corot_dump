@@ -1,0 +1,274 @@
+{
+    "DecisionList": {
+        "common": {
+            "YuvStreamResolutionOptions": {
+                "AspectRatioList": [
+                    1,
+                    1.33333,
+                    1.77777,
+                    2.22222
+                ],
+                // the tolerance shouldn't be too small. otherwise, mihal will choose the wrong resolution. 
+                "Tolerance": 0.05,
+                "UpScaleSizeFactor": 2
+            },
+            "isSupportAiFlash": 1
+        },
+        "Sat": {
+            "NumOfSnapshotRequiredBySR": 8,
+            "SrFusionZoomRegion": {
+                "lowerBound": 3.0,
+                "upperBound": 5.0
+            },
+            "MfnrFusionZoomRegion": {
+                "lowerBound": 0.6,
+                "upperBound": 1.0
+            },
+            "MaxQuickShotNums": 2,
+            "MfnrZoomRatio": {
+                "mfnrStartZoomRatio": 1.0,
+                "mfnrEndZoomRatio": 10.0
+            },
+            "isSupportHdSr": 1,
+            "isSupportSrReprocess": 1,
+            "isNeedGetCropInMizone": 1
+        },
+        "Simple": {
+            "HdrType": 2,
+            "MFNRHDRSetting": {
+                "MFNRNums": 5
+            },
+            "doFrontY2YScale": 1
+        },
+        "ProfessionalMode": {
+        },
+        "Bokeh": {
+            "isSupportSEBokeh": 1,
+            "isSupportHDRBokeh": 1,
+            "isSupportSwitchDualBokehDisCap": 0
+        },
+        "SuperHD": {
+            "SuperResolToBinningResolFactor": 2,
+            "RemosaicType": 2
+        },
+        "SuperNight": {
+            "isFrontRawProcess": 0,
+            "isSupportFrontSnPlusFlash": 0,
+            "isSupportEll": 1
+        }
+    },
+    //Each stream 512M+256M memory default
+    "CaptureBufferThreshold": 536870912,
+    "CaptureSEBufferThreshold": 805306368,
+    "CaptureSNBufferThreshold": 805306368,
+    "MialgoTaskConsumption": {
+        "MialgoCapacity": 10,
+        "MI_ALGO_NONE": 0,
+        "MI_ALGO_VENDOR_MFNR": 0,
+        "MI_ALGO_MIHAL_MFNR": 2,
+        "MI_ALGO_HDR": 2,
+        "MI_ALGO_LLHDR": 2,
+        "MI_ALGO_VENDOR_MFNR_HDR": 2,
+        "MI_ALGO_MIHAL_MFNR_HDR": 2,
+        "MI_ALGO_SR": 2,
+        "MI_ALGO_HD_UPSCALE": 4,
+        "MI_ALGO_FUSION": 1,
+        "MI_ALGO_BOKEH": 2,
+        "MI_ALGO_BOKEH_VENDOR_MFNR": 2,
+        "MI_ALGO_BOKEH_MIHAL_MFNR": 4,
+        "MI_ALGO_SUPERNIGHT_BACK": 2,
+        "MI_ALGO_SUPERNIGHT_FRONT": 3,
+        "MI_ALGO_BOKEH_HDR": 4,
+        "MI_ALGO_BOKEH_SUPERNIGHT": 6,
+        "MI_ALGO_SR_HDR": 2,
+        "MI_ALGO_FUSION_SR": 2,
+        "MI_ALGO_MIHAL_AINR": 2,
+        "MI_ALGO_MIHAL_REMOSAIC_MFNR_HDR": 10,
+        "MI_ALGO_BOKEH_MD_MIHAL_MFNR": 4,
+        "MI_ALGO_BOKEH_MD_HDR": 5,
+        "MI_ALGO_BOKEH_MD_SUPERNIGHT": 6
+    },
+    "QuickShot": {
+        /**
+        *Bit Mask for HighQualityQuickShotDelayTime configure
+        *Bit[0 ~ 3]   - DelayTime XX ms of Bokeh MFNR in Back Camera
+        *Bit[4 ~ 7]   - DelayTime XX ms of Bokeh MFNR in Front Camera
+        *Bit[8 ~ 11]  - DelayTime XX ms of Back Normal Capture
+        *Bit[12 ~ 15] - DelayTime XX ms of HDR in Front Camera
+        *Bit[16 ~ 19] - DelayTime XX ms of HDR in Back Camera
+        *Bit[20 ~ 23] - DelayTime XX ms of SuperNightSe in Back Camera
+        *Bit[24 ~ 27] - DelayTime XX ms of SR in Back Camera
+        *Bit[28 ~ 31] - DelayTime XX ms of Front Normal Capture
+        *Bit[32 ~ 35] - DelayTime XX ms of MIHAL AINR in Back Camera
+        *Bit[40 ~ 63] - reserv
+        */
+        "QuickShotDelayTimeMask": "0x0000000000",
+        /**
+        * Bit Mask Of HighQualityQuickShot Support
+        * Bit[0]		 - Support MFSR/LLS in SAT mode
+        * Bit[1]		 - Support HDR in SAT mode
+        * Bit[2]		 - Support SR in SAT mode
+        * Bit[3]		 - Support SuperNightSE in SAT mode
+        * Bit[4~7]   - reserve
+        * Bit[8]		 - Support Bokeh MFNR in Back Camera
+        * Bit[9]		 - Support Bokeh HDR in Back Camera
+        * Bit[10] 	- Support MFNR in Front Camera
+        * Bit[11] 	- Support HDR in Front Camera
+        * Bit[12] 	- Support Bokeh in Front Camera
+        * Bit[13] 	- Support  Macro Mode
+        * Bit[14~15]	 - reserve
+        * Bit[16~19]	 - HighQualityQuickShot queue length(max number of HighQualityQuickShot)
+        * Bit[20] 	 - Support reuse RDI buffer or not
+        * Bit[21] 	 - Support Limit MFNR input frames or not
+        * Bit[22~31]	 - reserve
+        **/
+        "QuickShotSupportedMask": "0xC30C07"
+    },
+    "BokehMD": {
+        "BokehMDCaptureSize": {
+            "MD_35": {
+                "WideCrop": [640, 480, 2816, 2112],
+                "UWideCrop": [598,449, 2803, 2102]
+            },
+            "MD_50": {
+                "TeleCrop": [0, 0, 4096, 3072],
+                "WideCrop": [0, 0, 4096, 3072],
+                "Fallback_WideCrop_4_3": [1024, 768, 2048, 1536],
+                "Fallback_UWideCrop_4_3": [1065, 799, 1869, 1402]
+            },
+            "MD_90": {
+                "TeleCrop": [928, 696, 2240, 1680],
+                "WideCrop": [910, 683, 2275, 1706],
+                "Fallback_WideCrop_4_3": [1488, 1116, 1120, 840],
+                "Fallback_UWideCrop_4_3": [1440, 1080, 1121, 841]
+            },
+            "BUST_4_3": {
+                "TeleCrop": [0, 0, 4096, 3072],
+                "WideCrop": [0, 0, 4096, 3072],
+                "Fallback_WideCrop": [1024, 768, 2048, 1536],
+                "Fallback_UWideCrop": [1065, 799, 1869, 1402]
+            },
+            "BUST_16_9": {
+                "TeleCrop": [0, 384, 4096, 2304],
+                "WideCrop": [45, 409, 4005, 2253],
+                "Fallback_WideCrop": [1024, 960, 2048, 1152],
+                "Fallback_UWideCrop": [1065, 974, 1869, 1051]
+            },
+            "BUST_FULL": {
+                "TeleCrop": [48, 636, 4000, 1800],
+                "WideCrop": [0, 614, 4094, 1842],
+                "Fallback_WideCrop": [1088, 1104, 1920, 864],
+                "Fallback_UWideCrop": [1065, 1079, 1869, 841]
+            },
+            "FULL_4_3": {
+                "WideCrop": [0, 0, 4096, 3072],
+                "UWideCrop": [0,0, 4000, 3000],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "FULL_16_9": {
+                "WideCrop": [0, 384, 4096, 2304],
+                "UWideCrop": [56, 406, 3888, 2186],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "FULL_FULL": {
+                "WideCrop": [48, 636, 4000, 1800],
+                "UWideCrop": [131, 659, 3738, 1682],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_4_3": {
+                "WideCrop": [0, 0, 4096, 3072],
+                "UWideCrop": [0,0, 3280, 2464],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_16_9": {
+                "WideCrop": [0, 384, 4096, 2304],
+                "UWideCrop": [37, 329, 3206, 1806],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_FULL": {
+                "WideCrop": [48, 636, 4000, 1800],
+                "UWideCrop": [0, 493, 3280, 1478],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            }
+        },
+        "BokehMDPreviewSize": {
+            "MD_35": {
+                "WideCrop": [640, 480, 2816, 2112],
+                "UWideCrop": [598,449, 2803, 2102]
+            },
+            "MD_50": {
+                "TeleCrop": [0, 0, 4096, 3072],
+                "WideCrop": [0, 0, 4096, 3072],
+                "Fallback_WideCrop_4_3": [1024, 768, 2048, 1536],
+                "Fallback_UWideCrop_4_3": [1065, 799, 1869, 1402]
+            },
+            "MD_90": {
+                "TeleCrop": [928, 696, 2240, 1680],
+                "WideCrop": [910, 683, 2275, 1706],
+                "Fallback_WideCrop_4_3": [1488, 1116, 1120, 840],
+                "Fallback_UWideCrop_4_3": [1252, 939, 1495, 1122]
+            },
+            "BUST_4_3": {
+                "TeleCrop": [0, 0, 4096, 3072],
+                "WideCrop": [0, 0, 4096, 3072],
+                "Fallback_WideCrop": [1024, 768, 2048, 1536],
+                "Fallback_UWideCrop": [1065, 799, 1869, 1402]
+            },
+            "BUST_16_9": {
+                "TeleCrop": [0, 384, 4096, 2304],
+                "WideCrop": [45, 409, 4005, 2253],
+                "Fallback_WideCrop": [1024, 960, 2048, 1152],
+                "Fallback_UWideCrop": [1065, 974, 1869, 1051]
+            },
+            "BUST_FULL": {
+                "TeleCrop": [48, 636, 4000, 1800],
+                "WideCrop": [0, 614, 4094, 1842],
+                "Fallback_WideCrop": [1088, 1104, 1920, 864],
+                "Fallback_UWideCrop": [1065, 1079, 1869, 841]
+            },
+            "FULL_4_3": {
+                "WideCrop": [0, 0, 4096, 3072],
+                "UWideCrop": [0,0, 4000, 3000],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "FULL_16_9": {
+                "WideCrop": [0, 384, 4096, 2304],
+                "UWideCrop": [56, 406, 3888, 2186],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "FULL_FULL": {
+                "WideCrop": [48, 636, 4000, 1800],
+                "UWideCrop": [131, 659, 3738, 1682],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_4_3": {
+                "WideCrop": [0, 0, 4096, 3072],
+                "UWideCrop": [0,0, 3280, 2464],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_16_9": {
+                "WideCrop": [0, 384, 4096, 2304],
+                "UWideCrop": [37, 329, 3206, 1806],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            },
+            "CN_FULL_FULL": {
+                "WideCrop": [48, 636, 4000, 1800],
+                "UWideCrop": [0, 493, 3280, 1478],
+                "Fallback_WideCrop": [0,0,0,0],
+                "Fallback_UWideCrop": [0,0,0,0]
+            }
+        },
+        "isSupportBokehMD": 1
+    }
+}

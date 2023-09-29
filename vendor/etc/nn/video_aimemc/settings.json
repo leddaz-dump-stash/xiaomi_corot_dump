@@ -1,0 +1,30 @@
+{
+    "Fallback": [
+        {
+            "conf_scale": 3.0517578e-05,
+            "jump_thres": 0.008,
+            "green_thres": 0.22,
+            "diff_thres": 0.01,
+            "green_scale": 3.0111396e-05,
+            "diff_scale": 0.0045658955
+        }
+    ],
+    "LetterBox": [
+        {
+            "row_samples": 24,
+            "points_per_row": 196,
+            "max_low_thres": 46,
+            "max_high_thres": 50,
+            "max_diff_thres": 58,
+            "max_break_thres": 52,
+            "mean_thres": 37.4,
+            "mean_diff_thres": 256.0,
+            "var_thres": 74.0,
+            "var_break_thres": 90.0,
+            "safe_margin_right": 3,
+            "safe_margin_left": 3,
+            "safe_margin_bottom": 3,
+            "safe_margin_top": 3
+        }
+    ]
+}

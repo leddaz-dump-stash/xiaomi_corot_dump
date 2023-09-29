@@ -1,0 +1,10 @@
+on post-fs-data
+    # Create directory for mbnconfig
+    mkdir /data/vendor/mcfconfig 0777 system system
+
+service mcfota_service /vendor/bin/mcfota_service
+    class core
+    user system
+    group system
+    oneshot
+

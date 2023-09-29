@@ -1,0 +1,12 @@
+{
+    "Enable_TL": true,
+    "TL_Modelpath": "/vendor/etc",
+    "Scenario_num": 2,
+    "Quality_num": 8,
+
+    "//": "Put customized dla into 'TL_Modelpath' and name the files like:",
+    "//": "TL_AISR_D0_Q0_360p, TL_AISR_D1_Q0_540p, TL_AISR_D0_Q1_720p, ...",
+    "//": "D is scenario domain, D0 means the first scenario option",
+    "//": "Q is quality domain, Q1 means the second quality option",
+    "//": "360p, 540p, 720p: 3 resolution domain are supported"
+}

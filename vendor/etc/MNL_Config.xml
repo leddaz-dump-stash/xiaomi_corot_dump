@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mnl_config version="21111601.6.00.00" type="gps">
+
+    <feature>IFB
+        <version>1.0</version>
+        <config>1</config>
+        <format> CH:-7 to 6 </format>
+        <setting>-9.41,-8.40,-6.62,-0.93,-0.98,-4.52,-1.36,0,-0.70,-0.86,-2.08,-2.64,-4.86,-6.46</setting>
+    </feature>
+    
+    <feature>GGTO
+        <version>1.0</version>
+        <config>1</config>
+        <format> GLONASS time offset, BEIDOU time offset, GALILEO time offset, NAVIC time offset, Unit: meter </format>
+        <setting>13.17,0.13,3.10,13.82</setting>
+    </feature>
+    
+    <feature>DCB
+        <version>1.0</version>
+        <config>1</config>
+        <format>L5_DCB_GPS,L5_DCB_QZSS,L5_DCB_CNSS,L5_DCB_GALILEO</format>
+        <setting>-9.69,-9.70,-11.13,-10.68</setting>
+        <format>L1C_DCB_GPS,L1C_DCB_QZSS,B1C_DCB_CNSS</format>
+        <setting>0,0,2.29</setting>        
+    </feature>
+    
+    <feature>L1Only
+        <version>1.0</version>
+        <config>0</config>
+        <format>L1 only: 1</format>
+        <setting>0</setting>
+    </feature>
+    
+    <feature>L5Test
+        <version>1.0</version>
+        <config>0</config>
+        <format>Search and used GPS L5 satellites according to the healthy status: 0, Search and used GPS L5 satellites regardless of its healthy status: 1</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>DisableSignal
+        <version>1.0</version>
+        <config>1</config>
+        <format>(Bitmask)Disable B1C:bit0, GPS_L1C:bit1, QZSS_L1C:bit2, E5B:bit3, B2B:bit4</format>
+        <setting>6</setting>
+    </feature>    
+
+    <feature>GLP
+        <version>2.0</version>
+        <config>1</config>
+        <format>Enable</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>CAIC
+        <version>1.0</version>
+        <config>0</config>
+        <format>L1 CAIC FrequencyHz</format>
+        <setting>1560000000</setting>
+        <format>L5 CAIC FrequencyHz</format>
+        <setting>1170000000</setting>
+    </feature>
+
+    <feature>GnssMode
+        <version>1.0</version>
+        <config>0</config>
+        <format>GP+GL+BD:2, GP:3, BD:4, GP+GL+GA+BD:6, GP+GL+GA:8, GP+GL+GA+BD+NI:10, BD+GL+GA+NI:11</format>
+        <setting>6</setting>
+    </feature>
+
+    <feature>Bluesky
+        <version>1.0</version>
+        <config>1</config>
+        <format>enable:0,disable:1</format>
+        <setting>3</setting>
+    </feature>
+
+    <feature>CoTMS
+        <version>4.2</version>
+        <config>1</config>
+        <format>RTS,TEP</format>
+        <setting>1,3</setting>
+    </feature>
+
+    <feature>SwitchTIA
+        <version>1</version>
+        <config>1</config>
+        <format>enable:1,disable:0</format>
+        <setting>0</setting>
+    </feature>
+
+    <feature>Blanking
+        <version>1</version>
+        <config>1</config>
+        <format>enable:1,disable:0</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>MDTime
+        <version>2.0</version>
+        <config>1</config>
+        <format>featureOption,requestInterval,sizeOfWindow,syncBackNum(optional)</format>
+        <setting>1,5000,1500,0</setting>
+    </feature>
+    
+    <feature>Time_Source
+        <version>1.0</version>
+        <config>1</config>
+        <format>RAT,SIB</format>
+       <setting>50,6</setting>
+    </feature>
+    
+    <feature>AP_OFL_MODE
+        <version>1.0</version>
+        <config>1</config>
+        <format>AP Mode:0,OFL mode:1</format>
+        <setting>1</setting>
+    </feature>
+    
+    <feature>PSO
+        <version>1.0</version>
+        <config>1</config>
+        <format>Disable:0, Enable:1</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>DGPSMode
+        <version>1.0</version>
+        <config>1</config>
+        <format>Disable:0, SBAS:2, SBAS+B2B+SUPL:26, SBAS+B2B+SUPL+PPP:58</format>
+        <setting>58</setting>
+    </feature>
+
+    <feature>L5DACQ
+        <version>1.0</version>
+        <config>1</config>
+        <format>Disable:0, Enable:1</format>
+        <setting>1</setting>
+    </feature>
+    
+    <feature>FastGeoFence
+        <version>1.0</version>
+        <config>1</config>
+        <format>Disable:0, Enable:1</format>
+        <setting>0</setting>
+    </feature>
+
+    <feature>GNSSPower
+        <version>1.0</version>
+        <config>1</config>
+        <format>singlebandTracking,multibandTracking,singlebandAcquisition,multibandAcquisition</format>
+        <setting>51.9,100.2,58.5,106.7</setting>
+    </feature>
+</mnl_config>

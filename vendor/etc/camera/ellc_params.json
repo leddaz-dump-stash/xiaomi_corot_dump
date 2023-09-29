@@ -1,0 +1,60 @@
+{
+    "ellc": {
+	"phone_version":"M12",
+	"model_version":"v1.1",
+	"hdr":"false",
+	"resize":"false",
+        "shape_patch":[800,1056],
+        "overlap": [64, 64],
+        "snpe":{
+		"runtime": "dsp",
+		"dlcs": {
+
+			"dlc_name": "ellc.dla",
+			"input": {
+				"name": "Placeholder:0",
+				"shape": [1,800,1056,24],
+				"offset": 0,
+				"delta":  0.00003052,
+				"encoding": "tf16"
+			},
+			"output": {
+				"name": "g_conv10/Conv2D:0",
+				"shape": [1,800,1056,4],
+				"offset": 0,
+				"delta": 0.00003052,
+				"encoding": "tf16"
+			}
+			}
+        },
+
+		"relight_setting": {
+			"range1_luxindex_start":8000.0,
+			"range1_luxindex_end":10000.0,
+			"range1_luxindex_start_ratio":4.0,
+			"range1_luxindex_end_ratio":4.0,
+			"range2_luxindex_start":10000.0,
+			"range2_luxindex_end":11000.0,
+			"range2_luxindex_start_ratio":4.0,
+			"range2_luxindex_end_ratio":2.0,
+			"range3_luxindex_start":11000.0,
+			"range3_luxindex_end":12000.0,
+			"range3_luxindex_start_ratio":2.0,
+			"range3_luxindex_end_ratio":0.5,
+			"range4_luxindex_start":12000.0,
+			"range4_luxindex_end":15000.0,
+			"range4_luxindex_start_ratio":0.5,
+			"range4_luxindex_end_ratio":0.1
+		},
+		"Threshold":{
+			"T_brightness":200,
+			"T_dark_scene":0,
+			"T_motion_1": 10000000000,
+			"T_motion_2": 10000000000,
+			"T_over_expose_threshold": 3500,
+			"T_over_expose_ratio": 0.4,
+			"T_first_frame_luxindex": 800
+		}
+	}
+}
+

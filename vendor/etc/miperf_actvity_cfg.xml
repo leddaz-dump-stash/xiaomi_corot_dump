@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PerfService>
+        <Package name="com.android.test1">
+                <Activity name="Common">
+                        <PERF_RES_BCK_CPUS Param1="2-6"/>
+                        <PERF_RES_MIN_FREQ_CPU Param1="0:200000"/>
+                        <PERF_RES_SCHED_BOOST Param1="1"/>
+                </Activity>
+        </Package>
+        <Package name="com.miui.test2">
+                <Activity name="Common">
+                        <PERF_RES_BCK_CPUS Param1="2-6"/>
+                        <PERF_RES_MIN_FREQ_CPU Param1="0:2000000"/>
+                        <PERF_RES_SCHED_BOOST Param1="1"/>
+                </Activity>
+        </Package>
+        <Package name="default.common.packagename_bak">
+                <Activity name="Common">
+                        <PERF_RES_BCK_CPUS Param1="2-6"/>
+                        <PERF_RES_MIN_FREQ_CPU Param1="0:2000000"/>
+                </Activity>
+        </Package>
+        <Package name="com.ss.android.ugc.aweme_bak">
+                <Activity name="Common">
+                        <PERF_RES_PERFMGR_ENABLE Param1="1"/>
+                        <PERF_RES_BOOST_AFFINITY Param1="1"/>
+                        <PERF_RES_POLICY_PERFRAME Param1="1"/>
+                        <PERF_RES_CPU4_CORECTL_ENABLE Param1="0"/>
+                        <PERF_RES_CPU7_CORECTL_ENABLE Param1="0"/>
+                </Activity>
+        </Package>
+        <Package name="com.miui.huanji_bak">
+                <Activity name="Common">
+                        <PERF_RES_PERFMGR_ENABLE Param1="1"/>
+                        <PERF_RES_BOOST_AFFINITY Param1="1"/>
+                        <PERF_RES_POLICY_PERFRAME Param1="1"/>
+                        <PERF_RES_CPU4_CORECTL_ENABLE Param1="0"/>
+                        <PERF_RES_CPU7_CORECTL_ENABLE Param1="0"/>
+                </Activity>
+        </Package>
+        <Package name="com.ss.android.ugc.aweme.lite_bak">
+                <Activity name="Common">
+                        <PERF_RES_PERFMGR_ENABLE Param1="1"/>
+                        <PERF_RES_BOOST_AFFINITY Param1="1"/>
+                        <PERF_RES_POLICY_PERFRAME Param1="1"/>
+                        <PERF_RES_CPU4_CORECTL_ENABLE Param1="0"/>
+                        <PERF_RES_CPU7_CORECTL_ENABLE Param1="0"/>
+                </Activity>
+        </Package>
+        <Package name="com.smile.gifmaker_bak">
+                <Activity name="Common">
+                        <PERF_RES_PERFMGR_ENABLE Param1="1"/>
+                        <PERF_RES_BOOST_AFFINITY Param1="1"/>
+                        <PERF_RES_POLICY_PERFRAME Param1="1"/>
+                        <PERF_RES_CPU4_CORECTL_ENABLE Param1="0"/>
+                        <PERF_RES_CPU7_CORECTL_ENABLE Param1="0"/>
+                </Activity>
+        </Package>
+        <Package name="com.kuaishou.nebula_bak">
+                <Activity name="Common">
+                        <PERF_RES_PERFMGR_ENABLE Param1="1"/>
+                        <PERF_RES_BOOST_AFFINITY Param1="1"/>
+                        <PERF_RES_POLICY_PERFRAME Param1="1"/>
+                        <PERF_RES_CPU4_CORECTL_ENABLE Param1="0"/>
+                        <PERF_RES_CPU7_CORECTL_ENABLE Param1="0"/>
+                </Activity>
+        </Package>
+</PerfService>

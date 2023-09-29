@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mtk_agps_profiles maj_ver="1" min_ver="2">
+  <!-- Refer to agps_profiles_conf2.xml for values not provided in this file.
+       cur_supl_profile is supported but other supl_profile are ignored.
+       auto_profile_enable is not supported.
+  -->
+  <!-- For CMCC, OK to use bd-caict SUPL Server on Internet.-->
+  <cur_supl_profile name="CMCC"
+      addr="ppp.bd-caict.com"
+      port="7275"
+      tls="true"
+  />
+  <cur_up_ssr_profile name="up_ssr_server"
+    addr="ppp.bd-caict.com"
+    port="7275"
+    tls="true"
+    supl_version="2"
+    supl_ver_minor="0"
+    supl_ver_ser_ind="4"
+    tls_version="1"
+    sha_version="0"
+    dedicated_apn_enable="false"
+  />
+  <agps_setting
+    agps_enable="true"
+    agps_protocol="0"
+    gpevt="false"
+    e911_gps_icon_enable="false"
+    e911_open_gps="false"
+    tc10_ignore_fw_config="false"
+    lppe_network_location_disable="false"
+    agps_nvram_enable="true"
+    lbs_log_enable="false"
+    lppe_crowd_source_confident="90"
+    ignore_si_for_e911="false"
+    ignore_emergency_ext_secs_from_framework="false"
+    lppe_dbh_num_sv_level_a="6"
+    lppe_dbh_num_sv_level_b="4"
+    lppe_dbh_nlp_accuracy_level_a="2000"
+    lppe_dbh_nlp_accuracy_level_b="2000"
+    lppe_dbh_cache_max_age="1024"
+    lppe_dbh_gnss_cache_max_age="1024"
+    lppe_dbh_fill_gnss_when_bad_nlp_enable="false"
+    ssr_protocol="0"
+    emergency_ext_secs="300"
+  />
+  <cp_setting
+    molr_pos_method="0"
+    external_addr_enable="false"
+    external_addr="0123456789*#+"
+    mlc_number_enable="false"
+    mlc_number="0123456789*#+"
+    cp_auto_reset="false"
+    epc_molr_lpp_payload_enable="false"
+    epc_molr_lpp_payload="D2000010237B2026404FB8007202BFFFFFFFF80000000020C0000100940FB9001202B7FFFFF8000000000061800002018A00"
+    reject_non911_nilr_enable="false"
+    cp_2g_disable="false"
+    cp_3g_disable="false"
+    cp_4g_disable="false"
+    cp_lppe_enable="true"
+    cp_lppe_wlan_enable="true"
+    cp_lppe_srn_enable="true"
+    cp_lppe_sensor_enable="true"
+    cp_lppe_dbh_enable="true"
+    cp_gvc_enable="false"
+    cp_ssr_enable="true"
+  />
+
+  <up_setting
+    imsi_enable="true"
+    up_ssr_enable="true"
+  />
+
+</mtk_agps_profiles>
