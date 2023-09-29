@@ -1,0 +1,8 @@
+{
+    "is_support_ecc": false,
+    "is_support_mbn": false,
+    "is_support_mcf": true,
+    "md5": "5e8d39d595281084fbea66149d89e49d",
+    "versionCode": 7,
+    "versionName": "XM_opcfg.1.0.7"
+}
