@@ -1,0 +1,17 @@
+# MAGT
+service magt /system/bin/magt
+    disabled
+    class main
+    user system
+    group system
+
+on boot && property:ro.vendor.magt.mtk_magt_support=1
+    start magt
+
+on post-fs-data && property:ro.vendor.magt.mtk_magt_support=1
+    mkdir /data/system 0775 system system
+    mkdir /data/system/mcd 0755 system system
+    restorecon_recursive /data/system/mcd
+    write /data/system/mcd/magt_status 0
+    chmod 664 /data/system/mcd/magt_status
+    chown system system /data/system/mcd/magt_status
