@@ -1,0 +1,14 @@
+# missi_phone_global-user 13 TP1A.220624.014 V14.0.6.0.TMLMIXM release-keys
+- manufacturer: xiaomi
+- platform: commonmt6985
+- codename: corot
+- flavor: missi_phone_global-user
+- release: 13
+- id: TP1A.220624.014
+- incremental: V14.0.6.0.TMLMIXM
+- tags: release-keys
+- fingerprint: Xiaomi/corot_global/corot:13/TP1A.220624.014/V14.0.6.0.TMLMIXM:user/release-keys
+- is_ab: true
+- brand: Xiaomi
+- branch: missi_phone_global-user-13-TP1A.220624.014-V14.0.6.0.TMLMIXM-release-keys
+- repo: xiaomi_corot_dump

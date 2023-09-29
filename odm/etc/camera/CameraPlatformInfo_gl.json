@@ -1,0 +1,138 @@
+{
+    "product": "corot",
+    "deviceInfo": {
+        "size": 8,
+        "0": {
+            "roleId"     : 64,
+            "sensorName" : "imx707;ov13b"
+        },
+        "1": {
+            "roleId"     : 1,
+            "sensorName" : "imx596"
+        },
+        "2": {
+            "roleId"     : 20,
+            "sensorName" : "ov50d"
+        },
+        "3": {
+            "roleId"     : 21,
+            "sensorName" : "ov13b"
+        },
+        "4": {
+            "roleId"     : 60,
+            "sensorName" : "imx707;ov13b;ov50d"
+        },
+        "5": {
+            "roleId"     : 61,
+            "sensorName" : "ov50d;imx707"
+        },
+        "6": {
+            "roleId"     : 63,
+            "sensorName" : "imx707;ov13b"
+        },
+        "7": {
+            "roleId"     : 0,
+            "sensorName" : "imx707"
+        }
+    },
+    "dualCamInfo": {
+        "size": 2,
+        "0": {
+            "masterRoleId"     : 0,
+            "slaveRoleId"      : 21,
+            "dumpFile"         : "/data/vendor/camera/com.xiaomi.dcal.wu.data",
+            "goldenFile"       : "/vendor/etc/camera/com.xiaomi.dcal.wu.golden",
+            "isEepromData"     : false,
+            "eepromDataRoleId" : 0,
+            "eepromOffset"     : 0,
+            "eepromDataSize"   : 4096
+        },
+        "1": {
+            "masterRoleId"     : 0,
+            "slaveRoleId"      : 20,
+            "dumpFile"         : "/data/vendor/camera/com.xiaomi.dcal.wt.data",
+            "goldenFile"       : "/vendor/etc/camera/com.xiaomi.dcal.wt.golden",
+            "isEepromData"     : false,
+            "eepromDataRoleId" : 0,
+            "eepromOffset"     : 0,
+            "eepromDataSize"   : 4096
+        }
+    },
+    "eepromMapInfo": {
+        "RoleIdRearWide": {
+            "semco": {
+                "fuseIdOffset"     : 16,
+                "fuseIdSize"       : 12,
+                "qrCodeFlagOffset" : 16354,
+                "qrCodeOffset"     : 16355,
+                "qrCodeSize"       : 14,
+                "hasOISMap"        : true,
+                "OISDataMap": {
+                    "OISGainXOffset"   : 8434,
+                    "OISGainYOffset"   : 8466,
+                    "OISDelayXOffset"  : 8436,
+                    "OISDelayYOffset"  : 8468,
+                    "OISStrokeXOffset" : 8461,
+                    "OISStrokeYOffset" : 8493
+                }
+            }
+        },
+        "RoleIdFront": {
+            "_aac": {
+                "fuseIdOffset"     : 16,
+                "fuseIdSize"       : 11,
+                "qrCodeFlagOffset" : 8081,
+                "qrCodeOffset"     : 8082,
+                "qrCodeSize"       : 14,
+                "hasOISMap"        : false
+            }
+        },
+        "RoleIdRearUltra": {
+            "ofilm": {
+                "fuseIdOffset"     : 16,
+                "fuseIdSize"       : 16,
+                "qrCodeFlagOffset" : 8081,
+                "qrCodeOffset"     : 8082,
+                "qrCodeSize"       : 14,
+                "hasOISMap"        : false
+            }
+        },
+        "RoleIdRearTele": {
+            "sunny": {
+                "fuseIdOffset"     : 16,
+                "fuseIdSize"       : 16,
+                "qrCodeFlagOffset" : 16354,
+                "qrCodeOffset"     : 16355,
+                "qrCodeSize"       : 14,
+                "hasOISMap"        : false
+            }
+        }
+    },
+    "InSensorZoom": {
+        "mode": 0,
+        "fakeSatInfo": {
+            "size": 3,
+            "0": {
+                "zoomStart"   : 2.0,
+                "zoomStop"    : 10.0,
+                "width"       : 4096,
+                "height"      : 3072
+            },
+            "1": {
+                "zoomStart"   : 2.0,
+                "zoomStop"    : 10.0,
+                "width"       : 4096,
+                "height"      : 2304
+            },
+            "2": {
+                "zoomStart"   : 2.0,
+                "zoomStop"    : 10.0,
+                "width"       : 4000,
+                "height"      : 1800
+            }
+        }
+    },
+    "HDHDR": {
+        "mode": 1
+    }
+}

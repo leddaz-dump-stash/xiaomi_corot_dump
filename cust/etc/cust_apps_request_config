@@ -1,0 +1,1 @@
+repository_url =http://pm.preload.xiaomi.srv/admin/api/v2/preload device =corot romRegion =global romVersionType =stable profile =1 custprop =None testConfigId= currentSku=MI custVersion=corot.mi.1.1.0061

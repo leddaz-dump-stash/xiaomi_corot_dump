@@ -1,0 +1,10 @@
+#if defined(PXLW_IRIS)
+# Add more firmware folder
+firmware_directories /mnt/vendor/iris/
+#endif
+# xiaomi display feature
+subsystem mi_display
+    devname uevent_devpath
+    dirname /dev/mi_display
+# xiaomi display feature
+/dev/mi_display/*         0666   root       graphics
